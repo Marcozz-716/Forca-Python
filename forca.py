@@ -29,7 +29,7 @@ class Forca:
     success = False
     if letra not in self.letras_tentadas:
       for i in range(len(word)):
-        if word[i] == letra and i not in self.acertos:
+        if word[i] == letra:
           self.acertos.append(i)
           success = True
       self.letras_tentadas.append(letra)
