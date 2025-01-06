@@ -10,15 +10,13 @@ class Forca:
     self.json_path = json_path
     self.selected_word = self.get_word()
     init() # colorama
-
-
+    
   def get_word(self):
     try:
       with open(self.json_path, 'r', encoding="utf-8") as file:
         data_json = json.load(file)
         palavras = data_json["palavras"]
         escolhida = random.choice(palavras)
-      #return [escolhida, "_"*len(escolhida)]
       return {"unmask": escolhida, "mask": '_'*len(escolhida)}
     except FileNotFoundError:
       print(Fore.RED + "Erro: arquivo 'words.json' não encontrado.")
@@ -44,7 +42,6 @@ class Forca:
     mask = list(self.selected_word["mask"])
     for i in self.acertos:
       mask[i] = unmask[i]
-
     return mask
   
   def is_game_over(self):
