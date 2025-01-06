@@ -3,7 +3,6 @@ from colorama import init, Fore
 
 class Forca:
   def __init__(self, life, json_path="words.json"):
-    print("init agora")
     self.life = life # ❤️
     self.acertos = []
     self.letras_tentadas = []
