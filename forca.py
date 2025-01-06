@@ -63,7 +63,7 @@ class Forca:
       print('='*50)
       print(f'\n PALAVRA: {self.selected_word["mask"].replace("", "ㅤ")}')
       print(f'\n VIDAS RESTANTES: {"❤️ "*self.life}')
-      print(f'\n LETRAS USADAS: {", ".join(self.letras_tentadas)}')
+      print(f'\n LETRAS JÁ USADAS: {", ".join(self.letras_tentadas)}')
       print(f'\n ==> Digite "sair" para encerrar o jogo')
       user_input = input("\n Escolha uma letra: ")
 
